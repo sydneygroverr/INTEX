@@ -10,7 +10,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<ProductContext>(options =>
 {
-    options.UseSqlite(builder.Configuration["ConnectionStrings:LegoConnection"]);
+    options.UseSqlServer(builder.Configuration["ConnectionStrings:LegoConnection"]);
 });
 
 builder.Services.AddScoped<IProductRepository, EFProductRepository>();
